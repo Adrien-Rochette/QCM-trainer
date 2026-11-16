@@ -1,0 +1,245 @@
+{
+  "format": "quizlab",
+  "version": 1,
+  "subjects": [
+    {
+      "id": "exemple-histoire-de-france",
+      "title": "Histoire de France",
+      "description": "Grandes dates et grands personnages de l’histoire de France, du Moyen Âge à la Ve République.",
+      "category": "Histoire",
+      "questions": [
+        {
+          "id": "hdf-bastille",
+          "difficulty": "facile",
+          "tags": ["Révolution française"],
+          "mcq": {
+            "prompt": "En quelle année a eu lieu la prise de la Bastille ?",
+            "choices": [
+              { "id": "a", "text": "1789" },
+              { "id": "b", "text": "1792" },
+              { "id": "c", "text": "1804" },
+              { "id": "d", "text": "1815" }
+            ],
+            "correctIds": ["a"]
+          },
+          "cloze": {
+            "text": "La prise de la Bastille a eu lieu le 14 juillet ___.",
+            "blanks": [{ "answers": ["1789"] }]
+          },
+          "explanation": "Le 14 juillet 1789 est devenu le symbole du début de la Révolution française."
+        },
+        {
+          "id": "hdf-sacre-napoleon",
+          "difficulty": "moyen",
+          "tags": ["Empire"],
+          "mcq": {
+            "prompt": "En quelle année Napoléon Bonaparte est-il sacré empereur ?",
+            "choices": [
+              { "id": "a", "text": "1799" },
+              { "id": "b", "text": "1804" },
+              { "id": "c", "text": "1815" },
+              { "id": "d", "text": "1769" }
+            ],
+            "correctIds": ["b"]
+          },
+          "cloze": {
+            "text": "Napoléon Ier est sacré empereur des Français en ___.",
+            "blanks": [{ "answers": ["1804"] }]
+          },
+          "explanation": "Le sacre a lieu le 2 décembre 1804 à Notre-Dame de Paris. 1799 correspond au coup d’État du 18 Brumaire."
+        },
+        {
+          "id": "hdf-clovis",
+          "difficulty": "moyen",
+          "tags": ["Moyen Âge"],
+          "mcq": {
+            "prompt": "Quel roi des Francs a été baptisé à Reims ?",
+            "choices": [
+              { "id": "a", "text": "Clovis" },
+              { "id": "b", "text": "Charlemagne" },
+              { "id": "c", "text": "Pépin le Bref" },
+              { "id": "d", "text": "Hugues Capet" }
+            ],
+            "correctIds": ["a"]
+          },
+          "cloze": {
+            "text": "___ est le roi des Francs baptisé à Reims à la fin du Ve siècle.",
+            "blanks": [{ "answers": ["Clovis", "Clovis Ier"] }]
+          }
+        },
+        {
+          "id": "hdf-charlemagne",
+          "difficulty": "moyen",
+          "tags": ["Moyen Âge"],
+          "mcq": {
+            "prompt": "En quelle année Charlemagne est-il couronné empereur à Rome ?",
+            "choices": [
+              { "id": "a", "text": "732" },
+              { "id": "b", "text": "800" },
+              { "id": "c", "text": "843" },
+              { "id": "d", "text": "987" }
+            ],
+            "correctIds": ["b"]
+          },
+          "cloze": {
+            "text": "Charlemagne est couronné empereur d’Occident à Rome en l’an ___.",
+            "blanks": [{ "answers": ["800"] }]
+          },
+          "explanation": "Il est couronné par le pape Léon III le 25 décembre 800."
+        },
+        {
+          "id": "hdf-jeanne-arc",
+          "difficulty": "moyen",
+          "tags": ["Moyen Âge", "guerre de Cent Ans"],
+          "mcq": {
+            "prompt": "Quelle ville Jeanne d’Arc a-t-elle libérée en 1429 ?",
+            "choices": [
+              { "id": "a", "text": "Orléans" },
+              { "id": "b", "text": "Reims" },
+              { "id": "c", "text": "Rouen" },
+              { "id": "d", "text": "Paris" }
+            ],
+            "correctIds": ["a"]
+          },
+          "cloze": {
+            "text": "En 1429, Jeanne d’Arc fait lever le siège d’___.",
+            "blanks": [{ "answers": ["Orléans"] }]
+          },
+          "explanation": "Après la libération d’Orléans, Jeanne d’Arc conduit Charles VII à Reims pour y être sacré."
+        },
+        {
+          "id": "hdf-edit-nantes",
+          "difficulty": "moyen",
+          "tags": ["Temps modernes"],
+          "mcq": {
+            "prompt": "Quel roi a signé l’édit de Nantes en 1598 ?",
+            "choices": [
+              { "id": "a", "text": "Henri IV" },
+              { "id": "b", "text": "Louis XIV" },
+              { "id": "c", "text": "François Ier" },
+              { "id": "d", "text": "Louis XIII" }
+            ],
+            "correctIds": ["a"]
+          },
+          "cloze": {
+            "text": "L’édit de Nantes est signé par le roi ___ en 1598.",
+            "blanks": [{ "answers": ["Henri IV", "Henri 4"] }]
+          },
+          "explanation": "L’édit de Nantes accorde la liberté de culte aux protestants. Louis XIV le révoque en 1685."
+        },
+        {
+          "id": "hdf-rois",
+          "difficulty": "moyen",
+          "tags": ["monarchie"],
+          "mcq": {
+            "prompt": "Lesquels de ces personnages ont été rois de France ? (plusieurs réponses)",
+            "choices": [
+              { "id": "a", "text": "Louis XVI" },
+              { "id": "b", "text": "François Ier" },
+              { "id": "c", "text": "Napoléon III" },
+              { "id": "d", "text": "Philippe Auguste" },
+              { "id": "e", "text": "Charles de Gaulle" }
+            ],
+            "correctIds": ["a", "b", "d"]
+          },
+          "explanation": "Napoléon III était empereur des Français et Charles de Gaulle président de la République."
+        },
+        {
+          "id": "hdf-cinquieme-republique",
+          "difficulty": "facile",
+          "tags": ["XXe siècle"],
+          "mcq": {
+            "prompt": "En quelle année la Ve République est-elle fondée ?",
+            "choices": [
+              { "id": "a", "text": "1946" },
+              { "id": "b", "text": "1958" },
+              { "id": "c", "text": "1962" },
+              { "id": "d", "text": "1968" }
+            ],
+            "correctIds": ["b"]
+          },
+          "cloze": {
+            "text": "La Constitution de la Ve République est adoptée en ___.",
+            "blanks": [{ "answers": ["1958"] }]
+          }
+        },
+        {
+          "id": "hdf-schoelcher",
+          "difficulty": "difficile",
+          "tags": ["XIXe siècle"],
+          "cloze": {
+            "text": "L’esclavage est définitivement aboli dans les colonies françaises en 1848, à l’initiative de Victor ___.",
+            "blanks": [{ "answers": ["Schœlcher", "Schoelcher"] }]
+          }
+        },
+        {
+          "id": "hdf-armistice-1918",
+          "difficulty": "facile",
+          "tags": ["XXe siècle", "Première Guerre mondiale"],
+          "mcq": {
+            "prompt": "Quelle date marque l’armistice de la Première Guerre mondiale ?",
+            "choices": [
+              { "id": "a", "text": "8 mai 1945" },
+              { "id": "b", "text": "11 novembre 1918" },
+              { "id": "c", "text": "14 juillet 1919" },
+              { "id": "d", "text": "6 juin 1944" }
+            ],
+            "correctIds": ["b"]
+          },
+          "cloze": {
+            "text": "L’armistice de la Première Guerre mondiale est signé le 11 novembre ___.",
+            "blanks": [{ "answers": ["1918"] }]
+          }
+        },
+        {
+          "id": "hdf-vote-femmes",
+          "difficulty": "moyen",
+          "tags": ["XXe siècle"],
+          "mcq": {
+            "prompt": "En quelle année les Françaises obtiennent-elles le droit de vote ?",
+            "choices": [
+              { "id": "a", "text": "1918" },
+              { "id": "b", "text": "1936" },
+              { "id": "c", "text": "1944" },
+              { "id": "d", "text": "1968" }
+            ],
+            "correctIds": ["c"]
+          },
+          "cloze": {
+            "text": "Les femmes obtiennent le droit de vote en France en ___.",
+            "blanks": [{ "answers": ["1944"] }]
+          },
+          "explanation": "L’ordonnance du 21 avril 1944 accorde le droit de vote aux femmes, qui votent pour la première fois en 1945."
+        },
+        {
+          "id": "hdf-marignan",
+          "difficulty": "facile",
+          "tags": ["Renaissance"],
+          "cloze": {
+            "text": "La bataille de Marignan, remportée par François Ier, a lieu en ___.",
+            "blanks": [{ "answers": ["1515"] }]
+          }
+        },
+        {
+          "id": "hdf-badinter",
+          "difficulty": "moyen",
+          "tags": ["XXe siècle"],
+          "mcq": {
+            "prompt": "Quel garde des Sceaux a porté l’abolition de la peine de mort en 1981 ?",
+            "choices": [
+              { "id": "a", "text": "Robert Badinter" },
+              { "id": "b", "text": "Simone Veil" },
+              { "id": "c", "text": "Michel Rocard" },
+              { "id": "d", "text": "Jack Lang" }
+            ],
+            "correctIds": ["a"]
+          },
+          "cloze": {
+            "text": "La peine de mort est abolie en France en 1981, sous l’impulsion de Robert ___.",
+            "blanks": [{ "answers": ["Badinter"] }]
+          }
+        }
+      ]
+    }
+  ]
+}

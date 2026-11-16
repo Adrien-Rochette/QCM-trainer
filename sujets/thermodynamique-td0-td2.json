@@ -1,0 +1,1037 @@
+{
+  "format": "quizlab",
+  "version": 1,
+  "subjects": [
+    {
+      "id": "thermo-ch1-ch2-td0-td2",
+      "title": "Thermodynamique — Chapitres 1-2 et TD 0 à 2",
+      "description": "Systèmes à l’équilibre, gaz parfaits, fluides réels (Van der Waals, compressibilité, dilatation) et rappels mathématiques. ECE ING3.",
+      "category": "Physique",
+      "questions": [
+        {
+          "id": "th-systeme-isole",
+          "difficulty": "facile",
+          "tags": ["chapitre 1", "systèmes"],
+          "mcq": {
+            "prompt": "Un système isolé échange avec l’extérieur…",
+            "choices": [
+              { "id": "a", "text": "ni matière ni énergie" },
+              { "id": "b", "text": "de l’énergie mais pas de matière" },
+              { "id": "c", "text": "de la matière mais pas d’énergie" },
+              { "id": "d", "text": "de la matière et de l’énergie" }
+            ],
+            "correctIds": ["a"]
+          },
+          "cloze": { "text": "Un système qui n’échange ni matière ni énergie avec l’extérieur est dit ___.", "blanks": [{ "answers": ["isolé"] }] },
+          "explanation": "Isolé : ni matière ni énergie (ni Q ni W). Exemple : un thermos idéal parfaitement isolant."
+        },
+        {
+          "id": "th-systeme-ferme",
+          "difficulty": "facile",
+          "tags": ["chapitre 1", "systèmes"],
+          "mcq": {
+            "prompt": "Une bouteille fermée que l’on chauffe est un système…",
+            "choices": [
+              { "id": "a", "text": "ouvert" },
+              { "id": "b", "text": "fermé" },
+              { "id": "c", "text": "isolé" },
+              { "id": "d", "text": "adiabatique" }
+            ],
+            "correctIds": ["b"]
+          },
+          "cloze": { "text": "Un système qui échange de l’énergie mais pas de matière est dit ___.", "blanks": [{ "answers": ["fermé"] }] },
+          "explanation": "Fermé : pas d’échange de matière, mais l’énergie (chaleur, travail) peut être échangée."
+        },
+        {
+          "id": "th-systeme-ouvert",
+          "difficulty": "facile",
+          "tags": ["chapitre 1", "systèmes"],
+          "cloze": { "text": "Une turbine alimentée par un fluide est un exemple de système ___.", "blanks": [{ "answers": ["ouvert"] }] },
+          "explanation": "Ouvert : échanges de matière et d’énergie possibles (turbine, compresseur avec entrée et sortie)."
+        },
+        {
+          "id": "th-convention-signes",
+          "difficulty": "facile",
+          "tags": ["chapitre 1", "convention"],
+          "mcq": {
+            "prompt": "Avec la convention du cours (« convention du banquier »), Q > 0 signifie…",
+            "choices": [
+              { "id": "a", "text": "que le système reçoit de la chaleur" },
+              { "id": "b", "text": "que le système cède de la chaleur" },
+              { "id": "c", "text": "que la transformation est adiabatique" },
+              { "id": "d", "text": "que la température est constante" }
+            ],
+            "correctIds": ["a"]
+          },
+          "explanation": "Tout ce que reçoit le système est positif, tout ce qu’il cède est négatif. Même règle pour W."
+        },
+        {
+          "id": "th-extensives",
+          "difficulty": "moyen",
+          "tags": ["chapitre 1", "variables d’état"],
+          "mcq": {
+            "prompt": "Lesquelles de ces grandeurs sont extensives ? (plusieurs réponses)",
+            "choices": [
+              { "id": "a", "text": "La masse m" },
+              { "id": "b", "text": "Le volume V" },
+              { "id": "c", "text": "La quantité de matière n" },
+              { "id": "d", "text": "L’énergie interne U" },
+              { "id": "e", "text": "La température T" },
+              { "id": "f", "text": "La pression P" }
+            ],
+            "correctIds": ["a", "b", "c", "d"]
+          },
+          "explanation": "Une grandeur extensive s’additionne quand on réunit deux sous-systèmes semblables. T et P sont intensives."
+        },
+        {
+          "id": "th-intensives",
+          "difficulty": "moyen",
+          "tags": ["chapitre 1", "variables d’état"],
+          "mcq": {
+            "prompt": "Lesquelles de ces grandeurs sont intensives ? (plusieurs réponses)",
+            "choices": [
+              { "id": "a", "text": "La pression P" },
+              { "id": "b", "text": "La température T" },
+              { "id": "c", "text": "La masse volumique ρ = m/V" },
+              { "id": "d", "text": "Le volume molaire Vm = V/n" },
+              { "id": "e", "text": "Le volume V" },
+              { "id": "f", "text": "L’énergie interne U" }
+            ],
+            "correctIds": ["a", "b", "c", "d"]
+          },
+          "explanation": "Une grandeur intensive ne change pas si l’on double la taille du système. Le rapport de deux grandeurs extensives (m/V, V/n) est intensif."
+        },
+        {
+          "id": "th-fonction-etat",
+          "difficulty": "moyen",
+          "tags": ["chapitre 1", "fonctions d’état"],
+          "mcq": {
+            "prompt": "Parmi ces grandeurs, lesquelles ne sont PAS des fonctions d’état ? (plusieurs réponses)",
+            "choices": [
+              { "id": "a", "text": "La chaleur Q" },
+              { "id": "b", "text": "Le travail W" },
+              { "id": "c", "text": "L’énergie interne U" },
+              { "id": "d", "text": "La température T" },
+              { "id": "e", "text": "La pression P" }
+            ],
+            "correctIds": ["a", "b"]
+          },
+          "cloze": { "text": "Une grandeur dont la variation ne dépend que des états initial et final, et non du chemin suivi, est une fonction d’___.", "blanks": [{ "answers": ["état"] }] },
+          "explanation": "Q et W dépendent de la transformation suivie. U, P et T ne dépendent que de l’état : ΔF = Ff − Fi."
+        },
+        {
+          "id": "th-equilibre",
+          "difficulty": "moyen",
+          "tags": ["chapitre 1", "équilibre"],
+          "mcq": {
+            "prompt": "L’équilibre thermodynamique exige simultanément l’équilibre… (plusieurs réponses)",
+            "choices": [
+              { "id": "a", "text": "thermique" },
+              { "id": "b", "text": "mécanique" },
+              { "id": "c", "text": "chimique" },
+              { "id": "d", "text": "électrique" }
+            ],
+            "correctIds": ["a", "b", "c"]
+          },
+          "explanation": "Thermique (températures égales), mécanique (pas de déséquilibre de pression) et chimique (composition stable)."
+        },
+        {
+          "id": "th-agitation",
+          "difficulty": "facile",
+          "tags": ["chapitre 1", "équilibre"],
+          "mcq": {
+            "prompt": "À l’équilibre thermodynamique, les molécules d’un gaz…",
+            "choices": [
+              { "id": "a", "text": "sont immobiles" },
+              { "id": "b", "text": "continuent de s’agiter" },
+              { "id": "c", "text": "se déplacent toutes à la même vitesse" },
+              { "id": "d", "text": "ne heurtent plus les parois" }
+            ],
+            "correctIds": ["b"]
+          },
+          "explanation": "À l’équilibre, P, V, T et n sont bien définies et stables, mais l’agitation microscopique continue."
+        },
+        {
+          "id": "th-kelvin",
+          "difficulty": "facile",
+          "tags": ["chapitre 1", "température", "conversions"],
+          "mcq": {
+            "prompt": "Une température de 10 °C correspond à…",
+            "choices": [
+              { "id": "a", "text": "10 K" },
+              { "id": "b", "text": "263,15 K" },
+              { "id": "c", "text": "283,15 K" },
+              { "id": "d", "text": "373,15 K" }
+            ],
+            "correctIds": ["c"]
+          },
+          "cloze": { "text": "Conversion : T(K) = t(°C) + ___.", "blanks": [{ "answers": ["273,15", "273.15"] }] },
+          "explanation": "T(K) = t(°C) + 273,15, donc 10 °C = 283,15 K."
+        },
+        {
+          "id": "th-delta-t",
+          "difficulty": "moyen",
+          "tags": ["chapitre 1", "température", "conversions"],
+          "mcq": {
+            "prompt": "Une variation de température de 10 °C correspond à une variation de…",
+            "choices": [
+              { "id": "a", "text": "10 K" },
+              { "id": "b", "text": "283,15 K" },
+              { "id": "c", "text": "263,15 K" },
+              { "id": "d", "text": "0,1 K" }
+            ],
+            "correctIds": ["a"]
+          },
+          "explanation": "ΔT(K) = Δt(°C) : un écart de 10 °C vaut 10 K. Ne pas confondre avec une température de 10 °C (283,15 K)."
+        },
+        {
+          "id": "th-adiabatique",
+          "difficulty": "facile",
+          "tags": ["chapitre 1", "transformations"],
+          "mcq": {
+            "prompt": "Une transformation adiabatique est telle que…",
+            "choices": [
+              { "id": "a", "text": "Q = 0" },
+              { "id": "b", "text": "T = constante" },
+              { "id": "c", "text": "P = constante" },
+              { "id": "d", "text": "W = 0" }
+            ],
+            "correctIds": ["a"]
+          },
+          "cloze": { "text": "Une transformation sans échange de chaleur (Q = 0) est dite ___.", "blanks": [{ "answers": ["adiabatique"] }] },
+          "explanation": "Adiabatique signifie Q = 0, pas T constante : adiabatique ≠ isotherme."
+        },
+        {
+          "id": "th-diatherme",
+          "difficulty": "moyen",
+          "tags": ["chapitre 1", "température"],
+          "cloze": { "text": "Une paroi qui permet les échanges de chaleur est dite ___.", "blanks": [{ "answers": ["diatherme", "diathermane"] }] },
+          "explanation": "Une paroi adiabatique bloque les échanges de chaleur ; une paroi diatherme les permet."
+        },
+        {
+          "id": "th-principe-zero",
+          "difficulty": "moyen",
+          "tags": ["chapitre 1", "température"],
+          "mcq": {
+            "prompt": "« Si A est en équilibre thermique avec C, et B aussi avec C, alors A et B sont en équilibre thermique entre eux. » Il s’agit…",
+            "choices": [
+              { "id": "a", "text": "du premier principe" },
+              { "id": "b", "text": "du deuxième principe" },
+              { "id": "c", "text": "du principe zéro" },
+              { "id": "d", "text": "de la loi de Boyle-Mariotte" }
+            ],
+            "correctIds": ["c"]
+          },
+          "cloze": { "text": "Le principe ___ fonde la notion de température commune et la mesure par thermomètre.", "blanks": [{ "answers": ["zéro", "0"] }] }
+        },
+        {
+          "id": "th-reversible",
+          "difficulty": "moyen",
+          "tags": ["chapitre 1", "transformations"],
+          "mcq": {
+            "prompt": "Quelle relation est correcte ?",
+            "choices": [
+              { "id": "a", "text": "réversible ⇒ quasi-statique" },
+              { "id": "b", "text": "quasi-statique ⇒ réversible" },
+              { "id": "c", "text": "irréversible ⇒ brutale" },
+              { "id": "d", "text": "quasi-statique ⇒ adiabatique" }
+            ],
+            "correctIds": ["a"]
+          },
+          "explanation": "Une transformation réversible est forcément quasi-statique, mais une quasi-statique peut garder des frottements ou des écarts de température finis : elle n’est pas forcément réversible."
+        },
+        {
+          "id": "th-irreversible-exemples",
+          "difficulty": "moyen",
+          "tags": ["chapitre 1", "transformations"],
+          "mcq": {
+            "prompt": "Lesquels sont des exemples de transformations irréversibles cités dans le cours ? (plusieurs réponses)",
+            "choices": [
+              { "id": "a", "text": "La diffusion d’encre dans l’eau" },
+              { "id": "b", "text": "Des oscillations amorties par frottement" },
+              { "id": "c", "text": "Une compression infiniment lente sans frottement ni écart de température" },
+              { "id": "d", "text": "Une transformation que l’on peut inverser par une modification infinitésimale" }
+            ],
+            "correctIds": ["a", "b"]
+          },
+          "explanation": "Une transformation irréversible ne peut pas être inversée sans laisser de trace sur le système et l’extérieur."
+        },
+        {
+          "id": "th-isochore",
+          "difficulty": "facile",
+          "tags": ["chapitre 1", "Clapeyron"],
+          "mcq": {
+            "prompt": "Dans un diagramme de Clapeyron (V en abscisse, P en ordonnée), une isochore est représentée par…",
+            "choices": [
+              { "id": "a", "text": "un segment vertical" },
+              { "id": "b", "text": "un segment horizontal" },
+              { "id": "c", "text": "une hyperbole décroissante" },
+              { "id": "d", "text": "une droite passant par l’origine" }
+            ],
+            "correctIds": ["a"]
+          },
+          "cloze": { "text": "Une transformation à volume constant est dite ___.", "blanks": [{ "answers": ["isochore"] }] }
+        },
+        {
+          "id": "th-isobare",
+          "difficulty": "facile",
+          "tags": ["chapitre 1", "Clapeyron"],
+          "mcq": {
+            "prompt": "Dans un diagramme de Clapeyron, une isobare est représentée par…",
+            "choices": [
+              { "id": "a", "text": "un segment vertical" },
+              { "id": "b", "text": "un segment horizontal" },
+              { "id": "c", "text": "une hyperbole décroissante" },
+              { "id": "d", "text": "une courbe plus raide qu’une isotherme" }
+            ],
+            "correctIds": ["b"]
+          },
+          "cloze": { "text": "Une transformation à pression constante est dite ___.", "blanks": [{ "answers": ["isobare"] }] }
+        },
+        {
+          "id": "th-isotherme-forme",
+          "difficulty": "moyen",
+          "tags": ["chapitre 1", "Clapeyron", "gaz parfait"],
+          "mcq": {
+            "prompt": "Pour un gaz parfait, une isotherme dans le diagramme P–V est…",
+            "choices": [
+              { "id": "a", "text": "une hyperbole décroissante" },
+              { "id": "b", "text": "un segment vertical" },
+              { "id": "c", "text": "une droite croissante" },
+              { "id": "d", "text": "un segment horizontal" }
+            ],
+            "correctIds": ["a"]
+          },
+          "cloze": { "text": "Une transformation à température constante est dite ___.", "blanks": [{ "answers": ["isotherme"] }] },
+          "explanation": "À T constante, P = nRT/V : P est inversement proportionnelle à V."
+        },
+        {
+          "id": "th-adiabatique-pente",
+          "difficulty": "difficile",
+          "tags": ["chapitre 1", "Clapeyron"],
+          "mcq": {
+            "prompt": "Dans le diagramme P–V, une adiabatique réversible d’un gaz parfait, comparée à une isotherme passant par le même point, est…",
+            "choices": [
+              { "id": "a", "text": "plus raide" },
+              { "id": "b", "text": "moins raide" },
+              { "id": "c", "text": "confondue avec l’isotherme" },
+              { "id": "d", "text": "horizontale" }
+            ],
+            "correctIds": ["a"]
+          }
+        },
+        {
+          "id": "th-travail-signe",
+          "difficulty": "moyen",
+          "tags": ["chapitre 1", "travail"],
+          "mcq": {
+            "prompt": "Avec δW = −P dV, pendant une détente réversible (dV > 0), le travail reçu par le gaz est…",
+            "choices": [
+              { "id": "a", "text": "négatif" },
+              { "id": "b", "text": "positif" },
+              { "id": "c", "text": "nul" },
+              { "id": "d", "text": "impossible à déterminer" }
+            ],
+            "correctIds": ["a"]
+          },
+          "explanation": "Détente : W < 0 (le gaz fournit du travail). Compression : W > 0."
+        },
+        {
+          "id": "th-gp-hypotheses",
+          "difficulty": "moyen",
+          "tags": ["chapitre 2", "gaz parfait"],
+          "mcq": {
+            "prompt": "Quelles sont les hypothèses du modèle du gaz parfait ? (plusieurs réponses)",
+            "choices": [
+              { "id": "a", "text": "Les particules sont des points matériels (volume propre négligeable)" },
+              { "id": "b", "text": "Pas d’énergie potentielle d’interaction entre molécules (hors chocs)" },
+              { "id": "c", "text": "Agitation aléatoire, la pression vient des chocs sur les parois" },
+              { "id": "d", "text": "De fortes attractions entre molécules" },
+              { "id": "e", "text": "Un volume propre des molécules important" }
+            ],
+            "correctIds": ["a", "b", "c"]
+          },
+          "explanation": "Les gaz nobles monoatomiques à faible pression s’en approchent, mais aucun gaz réel n’est exactement parfait."
+        },
+        {
+          "id": "th-vitesse-quadratique",
+          "difficulty": "moyen",
+          "tags": ["chapitre 2", "cinétique"],
+          "mcq": {
+            "prompt": "La vitesse quadratique moyenne v* est égale à…",
+            "choices": [
+              { "id": "a", "text": "√⟨v²⟩" },
+              { "id": "b", "text": "⟨v⟩" },
+              { "id": "c", "text": "⟨v⟩²" },
+              { "id": "d", "text": "⟨v²⟩" }
+            ],
+            "correctIds": ["a"]
+          },
+          "explanation": "v* = √⟨v²⟩ = √((1/N) Σ vᵢ²). Attention : ce n’est pas la moyenne arithmétique ⟨v⟩."
+        },
+        {
+          "id": "th-equipartition",
+          "difficulty": "moyen",
+          "tags": ["chapitre 2", "équipartition"],
+          "mcq": {
+            "prompt": "Le principe d’équipartition attribue à chaque degré de liberté quadratique une énergie moyenne de…",
+            "choices": [
+              { "id": "a", "text": "½ k_B·T" },
+              { "id": "b", "text": "3/2 k_B·T" },
+              { "id": "c", "text": "k_B·T" },
+              { "id": "d", "text": "R·T" }
+            ],
+            "correctIds": ["a"]
+          },
+          "cloze": { "text": "L’énergie cinétique moyenne de translation d’une molécule vaut ⟨Ec⟩ = ___ k_B·T.", "blanks": [{ "answers": ["3/2", "1,5", "1.5"] }] },
+          "explanation": "Trois directions de translation (x, y, z) × ½ k_B·T = 3/2 k_B·T."
+        },
+        {
+          "id": "th-r-na-kb",
+          "difficulty": "facile",
+          "tags": ["chapitre 2", "constantes"],
+          "mcq": {
+            "prompt": "Quelle relation relie R, N_A et k_B ?",
+            "choices": [
+              { "id": "a", "text": "R = N_A · k_B" },
+              { "id": "b", "text": "R = k_B / N_A" },
+              { "id": "c", "text": "R = N_A / k_B" },
+              { "id": "d", "text": "k_B = R · N_A" }
+            ],
+            "correctIds": ["a"]
+          },
+          "explanation": "k_B ≈ 1,38 × 10⁻²³ J/K, N_A ≈ 6,022 × 10²³ mol⁻¹, R = 8,314 J·mol⁻¹·K⁻¹."
+        },
+        {
+          "id": "th-v-star-formule",
+          "difficulty": "moyen",
+          "tags": ["chapitre 2", "cinétique"],
+          "mcq": {
+            "prompt": "La vitesse quadratique moyenne d’un gaz parfait s’écrit v* = …",
+            "choices": [
+              { "id": "a", "text": "√(3RT/M)" },
+              { "id": "b", "text": "√(RT/M)" },
+              { "id": "c", "text": "3RT/M" },
+              { "id": "d", "text": "√(3M/RT)" }
+            ],
+            "correctIds": ["a"]
+          },
+          "explanation": "Avec M en kg/mol (et non en g/mol) : piège classique de conversion."
+        },
+        {
+          "id": "th-he-ar",
+          "difficulty": "moyen",
+          "tags": ["chapitre 2", "cinétique"],
+          "mcq": {
+            "prompt": "À même température, quel gaz a la plus grande vitesse quadratique moyenne ?",
+            "choices": [
+              { "id": "a", "text": "L’hélium (M = 4 g/mol)" },
+              { "id": "b", "text": "L’argon (M = 40 g/mol)" },
+              { "id": "c", "text": "Les deux ont la même" },
+              { "id": "d", "text": "Cela dépend de la pression" }
+            ],
+            "correctIds": ["a"]
+          },
+          "explanation": "v* ∝ 1/√M. À 273 K : environ 1305 m/s pour l’hélium contre 413 m/s pour l’argon."
+        },
+        {
+          "id": "th-pression-cinetique",
+          "difficulty": "difficile",
+          "tags": ["chapitre 2", "cinétique"],
+          "mcq": {
+            "prompt": "Le modèle cinétique donne la pression P = …",
+            "choices": [
+              { "id": "a", "text": "(1/3)(N/V)·m·⟨v²⟩" },
+              { "id": "b", "text": "(1/2)(N/V)·m·⟨v²⟩" },
+              { "id": "c", "text": "3(N/V)·m·⟨v²⟩" },
+              { "id": "d", "text": "(N/V)·m·⟨v⟩" }
+            ],
+            "correctIds": ["a"]
+          },
+          "explanation": "Avec m(v*)² = 3k_B·T, on obtient P = (N/V)·k_B·T, puis PV = nRT."
+        },
+        {
+          "id": "th-pv-nkbt",
+          "difficulty": "difficile",
+          "tags": ["chapitre 2", "équation d’état"],
+          "mcq": {
+            "prompt": "Laquelle de ces relations est correcte ?",
+            "choices": [
+              { "id": "a", "text": "PV = N·k_B·T" },
+              { "id": "b", "text": "PV = 3N·k_B·T" },
+              { "id": "c", "text": "PV = n·k_B·T" },
+              { "id": "d", "text": "PV = N·R·T" }
+            ],
+            "correctIds": ["a"]
+          },
+          "explanation": "PV = N·k_B·T (N molécules) ou PV = nRT (n moles). Le « PV = 3N·k_B·T » du manuscrit est une coquille (facteur 3 en trop)."
+        },
+        {
+          "id": "th-u-monoatomique",
+          "difficulty": "moyen",
+          "tags": ["chapitre 2", "énergie interne"],
+          "mcq": {
+            "prompt": "L’énergie interne d’un gaz parfait monoatomique vaut…",
+            "choices": [
+              { "id": "a", "text": "U = 3/2 nRT" },
+              { "id": "b", "text": "U = 5/2 nRT" },
+              { "id": "c", "text": "U = nRT" },
+              { "id": "d", "text": "U = 1/2 nRT" }
+            ],
+            "correctIds": ["a"]
+          },
+          "cloze": { "text": "Pour un gaz parfait monoatomique, U = ___ nRT.", "blanks": [{ "answers": ["3/2", "1,5", "1.5"] }] },
+          "explanation": "Seules les 3 translations comptent. Um = 3/2 RT (J/mol) et u = 3RT/(2M) (J/kg). Ne se généralise pas aux gaz polyatomiques."
+        },
+        {
+          "id": "th-isobare-gp",
+          "difficulty": "moyen",
+          "tags": ["chapitre 2", "gaz parfait"],
+          "mcq": {
+            "prompt": "À n fixé, pour une transformation isobare d’un gaz parfait, quelle grandeur reste constante ?",
+            "choices": [
+              { "id": "a", "text": "V/T" },
+              { "id": "b", "text": "PV" },
+              { "id": "c", "text": "P/T" },
+              { "id": "d", "text": "P·T" }
+            ],
+            "correctIds": ["a"]
+          },
+          "cloze": { "text": "À n fixé, lors d’une transformation isochore d’un gaz parfait, le rapport P/___ reste constant.", "blanks": [{ "answers": ["T"] }] },
+          "explanation": "Isotherme : PV = cte ; isobare : V/T = cte ; isochore : P/T = cte."
+        },
+        {
+          "id": "th-vdw-b",
+          "difficulty": "moyen",
+          "tags": ["fluides réels", "Van der Waals"],
+          "mcq": {
+            "prompt": "Dans l’équation de Van der Waals, le paramètre b corrige…",
+            "choices": [
+              { "id": "a", "text": "le volume exclu dû à la taille des molécules" },
+              { "id": "b", "text": "l’effet des attractions entre molécules" },
+              { "id": "c", "text": "la température" },
+              { "id": "d", "text": "la quantité de matière" }
+            ],
+            "correctIds": ["a"]
+          },
+          "cloze": {
+            "text": "Dans (P + a/Vm²)(Vm − b) = RT, le terme a/Vm² corrige l’effet des ___ entre molécules.",
+            "blanks": [{ "answers": ["attractions", "forces d’attraction", "forces attractives", "interactions attractives"] }]
+          }
+        },
+        {
+          "id": "th-vdw-n-moles",
+          "difficulty": "difficile",
+          "tags": ["fluides réels", "Van der Waals"],
+          "mcq": {
+            "prompt": "Pour n moles, l’équation de Van der Waals s’écrit…",
+            "choices": [
+              { "id": "a", "text": "(P + n²a/V²)(V − nb) = nRT" },
+              { "id": "b", "text": "(P + na/V²)(V − b) = nRT" },
+              { "id": "c", "text": "(P + a/V²)(V − b) = nRT" },
+              { "id": "d", "text": "(P − n²a/V²)(V + nb) = nRT" }
+            ],
+            "correctIds": ["a"]
+          },
+          "explanation": "On remplace Vm par V/n dans la forme molaire. La forme (P + na/V²)(V − b) = nRT imprimée dans le TD 2 est une coquille."
+        },
+        {
+          "id": "th-vdw-unite-a",
+          "difficulty": "difficile",
+          "tags": ["fluides réels", "Van der Waals", "unités"],
+          "mcq": {
+            "prompt": "Quelle est l’unité du coefficient a de Van der Waals ?",
+            "choices": [
+              { "id": "a", "text": "Pa·m⁶·mol⁻²" },
+              { "id": "b", "text": "Pa·m³·mol⁻¹" },
+              { "id": "c", "text": "m³·mol⁻¹" },
+              { "id": "d", "text": "J·mol⁻¹·K⁻¹" }
+            ],
+            "correctIds": ["a"]
+          },
+          "explanation": "n²a/V² doit être une pression : [a] = Pa·m⁶·mol⁻². Le volume exclu nb est en m³, donc [b] = m³·mol⁻¹."
+        },
+        {
+          "id": "th-vdw-energie",
+          "difficulty": "difficile",
+          "tags": ["fluides réels", "Van der Waals"],
+          "cloze": { "text": "Pour un gaz de Van der Waals, U = U_GP(T) − n²a/___.", "blanks": [{ "answers": ["V"] }] },
+          "explanation": "À T constante, U_GP(T) ne change pas : on détermine a à partir de ΔU et de Δ(1/V)."
+        },
+        {
+          "id": "th-chi-t",
+          "difficulty": "moyen",
+          "tags": ["fluides réels", "compressibilité"],
+          "mcq": {
+            "prompt": "Le coefficient de compressibilité isotherme χT est défini par…",
+            "choices": [
+              { "id": "a", "text": "χT = −(1/V)(∂V/∂P) à T constante" },
+              { "id": "b", "text": "χT = (1/V)(∂V/∂T) à P constante" },
+              { "id": "c", "text": "χT = (1/V)(∂V/∂P) à T constante" },
+              { "id": "d", "text": "χT = −(1/P)(∂P/∂V) à T constante" }
+            ],
+            "correctIds": ["a"]
+          },
+          "explanation": "χT s’exprime en Pa⁻¹. Le signe « − » le rend positif, car V diminue quand P augmente. (1/V)(∂V/∂T) à P constante est α, en K⁻¹."
+        },
+        {
+          "id": "th-gp-chi-alpha",
+          "difficulty": "moyen",
+          "tags": ["fluides réels", "gaz parfait", "compressibilité"],
+          "mcq": {
+            "prompt": "Pour un gaz parfait, χT et α valent respectivement…",
+            "choices": [
+              { "id": "a", "text": "χT = 1/P et α = 1/T" },
+              { "id": "b", "text": "χT = 1/T et α = 1/P" },
+              { "id": "c", "text": "χT = P et α = T" },
+              { "id": "d", "text": "χT = 0 et α = 0" }
+            ],
+            "correctIds": ["a"]
+          },
+          "cloze": { "text": "Pour un gaz parfait, le coefficient de dilatation isobare vaut α = 1/___.", "blanks": [{ "answers": ["T"] }] },
+          "explanation": "V = nRT/P : (∂V/∂P)_T = −V/P donc χT = 1/P ; (∂V/∂T)_P = V/T donc α = 1/T."
+        },
+        {
+          "id": "th-dv-sur-v",
+          "difficulty": "moyen",
+          "tags": ["fluides réels", "compressibilité"],
+          "mcq": {
+            "prompt": "La relation générale entre variations de volume, de température et de pression est…",
+            "choices": [
+              { "id": "a", "text": "dV/V = α dT − χT dP" },
+              { "id": "b", "text": "dV/V = α dP − χT dT" },
+              { "id": "c", "text": "dV/V = χT dT + α dP" },
+              { "id": "d", "text": "dV/V = −α dT + χT dP" }
+            ],
+            "correctIds": ["a"]
+          },
+          "explanation": "Pour un gaz parfait (n fixé), elle devient dV/V = dT/T − dP/P. À volume constant : dP = (α/χT) dT."
+        },
+        {
+          "id": "th-incompressible",
+          "difficulty": "moyen",
+          "tags": ["fluides réels", "compressibilité"],
+          "mcq": {
+            "prompt": "Un fluide idéal incompressible et indilatable vérifie…",
+            "choices": [
+              { "id": "a", "text": "χT = α = 0, donc V = V0" },
+              { "id": "b", "text": "χT = 1/P et α = 1/T" },
+              { "id": "c", "text": "PV = nRT" },
+              { "id": "d", "text": "χT très grand" }
+            ],
+            "correctIds": ["a"]
+          },
+          "explanation": "ln(V/V0) = α(T − T0) − χT(P − P0) = 0, donc le volume ne varie pas."
+        },
+        {
+          "id": "th-diff-xy",
+          "difficulty": "facile",
+          "tags": ["TD 0", "différentielles"],
+          "mcq": {
+            "prompt": "La différentielle de f(x, y) = xy est…",
+            "choices": [
+              { "id": "a", "text": "df = y dx + x dy" },
+              { "id": "b", "text": "df = x dx + y dy" },
+              { "id": "c", "text": "df = dx + dy" },
+              { "id": "d", "text": "df = xy (dx + dy)" }
+            ],
+            "correctIds": ["a"]
+          },
+          "explanation": "df = (∂f/∂x) dx + (∂f/∂y) dy, avec ∂f/∂x = y (y traité comme constante) et ∂f/∂y = x."
+        },
+        {
+          "id": "th-diff-cos",
+          "difficulty": "moyen",
+          "tags": ["TD 0", "différentielles"],
+          "mcq": {
+            "prompt": "La différentielle de f(x, y) = cos(x + y) est…",
+            "choices": [
+              { "id": "a", "text": "df = −sin(x + y)(dx + dy)" },
+              { "id": "b", "text": "df = sin(x + y)(dx + dy)" },
+              { "id": "c", "text": "df = −sin(x) dx − sin(y) dy" },
+              { "id": "d", "text": "df = cos(x + y)(dx + dy)" }
+            ],
+            "correctIds": ["a"]
+          }
+        },
+        {
+          "id": "th-exacte-critere",
+          "difficulty": "moyen",
+          "tags": ["TD 0", "différentielles"],
+          "mcq": {
+            "prompt": "Sur un domaine simplement connexe, la forme A(x, y) dx + B(x, y) dy est une différentielle exacte si…",
+            "choices": [
+              { "id": "a", "text": "∂A/∂y = ∂B/∂x" },
+              { "id": "b", "text": "∂A/∂x = ∂B/∂y" },
+              { "id": "c", "text": "A = B" },
+              { "id": "d", "text": "∂A/∂x + ∂B/∂y = 0" }
+            ],
+            "correctIds": ["a"]
+          },
+          "explanation": "C’est l’égalité des dérivées croisées (théorème de Schwarz) : ∂f_x/∂y = ∂f_y/∂x."
+        },
+        {
+          "id": "th-relation-cyclique",
+          "difficulty": "moyen",
+          "tags": ["TD 0", "dérivées partielles"],
+          "mcq": {
+            "prompt": "Pour PV = nRT, que vaut le produit (∂V/∂T)_P · (∂T/∂P)_V · (∂P/∂V)_T ?",
+            "choices": [
+              { "id": "a", "text": "−1" },
+              { "id": "b", "text": "1" },
+              { "id": "c", "text": "0" },
+              { "id": "d", "text": "PV/T" }
+            ],
+            "correctIds": ["a"]
+          },
+          "cloze": { "text": "Relation cyclique : (∂V/∂T)_P · (∂T/∂P)_V · (∂P/∂V)_T = ___.", "blanks": [{ "answers": ["-1", "−1", "moins 1", "moins un"] }] },
+          "explanation": "(nR/P) × (V/nR) × (−nRT/V²) = −nRT/(PV) = −1."
+        },
+        {
+          "id": "th-w-isotherme",
+          "difficulty": "moyen",
+          "tags": ["TD 0", "travail"],
+          "mcq": {
+            "prompt": "Quel est le travail reçu par un gaz parfait lors d’une isotherme réversible de V1 à V2 ?",
+            "choices": [
+              { "id": "a", "text": "W = −nRT ln(V2/V1)" },
+              { "id": "b", "text": "W = nRT ln(V2/V1)" },
+              { "id": "c", "text": "W = −P(V2 − V1)" },
+              { "id": "d", "text": "W = 0" }
+            ],
+            "correctIds": ["a"]
+          },
+          "explanation": "W = −∫P dV avec P = nRT/V. On peut aussi l’écrire nRT ln(P2/P1)."
+        },
+        {
+          "id": "th-w-isobare",
+          "difficulty": "facile",
+          "tags": ["TD 0", "travail"],
+          "mcq": {
+            "prompt": "Quel est le travail reçu lors d’une transformation isobare de V1 à V2 ?",
+            "choices": [
+              { "id": "a", "text": "W = −P(V2 − V1)" },
+              { "id": "b", "text": "W = P(V2 − V1)" },
+              { "id": "c", "text": "W = −V(P2 − P1)" },
+              { "id": "d", "text": "W = 0" }
+            ],
+            "correctIds": ["a"]
+          }
+        },
+        {
+          "id": "th-w-isochore",
+          "difficulty": "facile",
+          "tags": ["TD 0", "travail"],
+          "cloze": { "text": "Lors d’une transformation isochore, le travail des forces de pression vaut W = ___.", "blanks": [{ "answers": ["0", "zéro"] }] },
+          "explanation": "dV = 0, donc δW = −P dV = 0."
+        },
+        {
+          "id": "th-delta-w",
+          "difficulty": "moyen",
+          "tags": ["TD 0", "travail", "fonctions d’état"],
+          "mcq": {
+            "prompt": "Pourquoi note-t-on δW et non dW ?",
+            "choices": [
+              { "id": "a", "text": "Parce que W dépend du chemin suivi : ce n’est pas une fonction d’état" },
+              { "id": "b", "text": "Parce que W est toujours très petit" },
+              { "id": "c", "text": "Parce que W est une grandeur intensive" },
+              { "id": "d", "text": "Parce que W est toujours négatif" }
+            ],
+            "correctIds": ["a"]
+          },
+          "explanation": "dP ou dU sont des différentielles exactes (fonctions d’état) ; δW et δQ sont des quantités échangées qui dépendent du trajet."
+        },
+        {
+          "id": "th-vm-0c-1atm",
+          "difficulty": "facile",
+          "tags": ["TD 1", "volume molaire"],
+          "mcq": {
+            "prompt": "Quel est le volume molaire d’un gaz parfait à 0 °C et 1 atm ?",
+            "choices": [
+              { "id": "a", "text": "≈ 22,41 L/mol" },
+              { "id": "b", "text": "≈ 22,71 L/mol" },
+              { "id": "c", "text": "≈ 24,05 L/mol" },
+              { "id": "d", "text": "≈ 1 L/mol" }
+            ],
+            "correctIds": ["a"]
+          },
+          "cloze": { "text": "À 0 °C et 1 atm, le volume molaire d’un gaz parfait vaut environ ___ L/mol.", "blanks": [{ "answers": ["22,4", "22.4", "22,41", "22.41"] }] },
+          "explanation": "Vm = RT/P = 8,314 × 273,15 / 101 325 ≈ 0,02241 m³/mol."
+        },
+        {
+          "id": "th-vm-1bar",
+          "difficulty": "moyen",
+          "tags": ["TD 2", "volume molaire", "conversions"],
+          "mcq": {
+            "prompt": "Quel est le volume molaire d’un gaz parfait à 0 °C et 1 bar ?",
+            "choices": [
+              { "id": "a", "text": "≈ 22,71 L/mol" },
+              { "id": "b", "text": "≈ 22,41 L/mol" },
+              { "id": "c", "text": "≈ 24,05 L/mol" },
+              { "id": "d", "text": "≈ 2,27 L/mol" }
+            ],
+            "correctIds": ["a"]
+          },
+          "explanation": "1 bar = 10⁵ Pa ≠ 1 atm = 101 325 Pa. Vm = 8,314 × 273,15 / 10⁵ ≈ 22,71 L/mol. Le résultat 22,41 L/mol correspond à 1 atm."
+        },
+        {
+          "id": "th-vm-20c",
+          "difficulty": "moyen",
+          "tags": ["chapitre 2", "volume molaire"],
+          "cloze": { "text": "À 20 °C et 1 atm, le volume molaire d’un gaz parfait vaut environ ___ L/mol.", "blanks": [{ "answers": ["24", "24,0", "24.0", "24,05", "24.05", "24,1", "24.1"] }] },
+          "explanation": "Vm = 8,314 × 293,15 / 101 325 ≈ 0,02405 m³/mol = 24,05 L/mol."
+        },
+        {
+          "id": "th-atm-bar",
+          "difficulty": "facile",
+          "tags": ["conversions"],
+          "mcq": {
+            "prompt": "1 atm vaut…",
+            "choices": [
+              { "id": "a", "text": "101 325 Pa" },
+              { "id": "b", "text": "100 000 Pa" },
+              { "id": "c", "text": "1 013 Pa" },
+              { "id": "d", "text": "10 000 Pa" }
+            ],
+            "correctIds": ["a"]
+          },
+          "cloze": { "text": "1 bar = ___ Pa.", "blanks": [{ "answers": ["100000", "100 000", "10^5", "10⁵", "1e5"] }] },
+          "explanation": "1 bar = 10⁵ Pa et 1 atm = 101 325 Pa : à ne pas confondre."
+        },
+        {
+          "id": "th-recipients-pression",
+          "difficulty": "difficile",
+          "tags": ["TD 1", "calcul"],
+          "mcq": {
+            "prompt": "Deux récipients de 1 L : A à 1 atm et 15 °C, B à 45 atm et 20 °C. On les met en communication et la température finale est 15 °C. Quelle est la pression finale ?",
+            "choices": [
+              { "id": "a", "text": "≈ 22,62 atm" },
+              { "id": "b", "text": "23 atm" },
+              { "id": "c", "text": "46 atm" },
+              { "id": "d", "text": "≈ 11,3 atm" }
+            ],
+            "correctIds": ["a"]
+          },
+          "explanation": "On conserve n_tot = PA·VA/(R·TA) + PB·VB/(R·TB), puis Pf = Tf/(VA + VB) × (PA·VA/TA + PB·VB/TB) ≈ 22,62 atm."
+        },
+        {
+          "id": "th-recipients-masse",
+          "difficulty": "difficile",
+          "tags": ["TD 1", "calcul"],
+          "cloze": { "text": "Dans le même exercice (air, M = 29 g/mol), environ ___ g d’air passent de B vers A.", "blanks": [{ "answers": ["26,5", "26.5", "26"] }] },
+          "explanation": "nA passe de ≈ 0,0423 mol à ≈ 0,9566 mol : Δn ≈ 0,9143 mol, soit Δm = M·Δn ≈ 26,5 g, de B (45 atm) vers A (1 atm)."
+        },
+        {
+          "id": "th-vdw-intensif",
+          "difficulty": "difficile",
+          "tags": ["TD 1", "Van der Waals", "variables d’état"],
+          "mcq": {
+            "prompt": "Pourquoi l’équation (P + a/Vm²)(Vm − b) = RT reste-t-elle valable quand on double la quantité de gaz à P et T identiques ?",
+            "choices": [
+              { "id": "a", "text": "Parce que le volume molaire Vm = V/n est intensif" },
+              { "id": "b", "text": "Parce que V est intensif" },
+              { "id": "c", "text": "Parce que a et b dépendent de n" },
+              { "id": "d", "text": "Parce que R double aussi" }
+            ],
+            "correctIds": ["a"]
+          },
+          "explanation": "V et n doublent, mais Vm ne change pas. P, T sont intensives et a, b, R sont des constantes."
+        },
+        {
+          "id": "th-cycle-t3",
+          "difficulty": "moyen",
+          "tags": ["TD 1", "cycle", "calcul"],
+          "mcq": {
+            "prompt": "État 1 : 1 atm, 1 m³, 300 K. État 3 : 1 atm, 4/3 m³ (même gaz parfait). Que vaut T3 ?",
+            "choices": [
+              { "id": "a", "text": "400 K" },
+              { "id": "b", "text": "300 K" },
+              { "id": "c", "text": "225 K" },
+              { "id": "d", "text": "600 K" }
+            ],
+            "correctIds": ["a"]
+          },
+          "explanation": "T3 = T1 × (P3·V3)/(P1·V1) = 300 × 4/3 = 400 K."
+        },
+        {
+          "id": "th-cycle-p2",
+          "difficulty": "facile",
+          "tags": ["TD 1", "cycle", "calcul"],
+          "cloze": { "text": "Lors d’une isochore où T passe de 300 K à 600 K, la pression d’un gaz parfait passe de 1 atm à ___ atm.", "blanks": [{ "answers": ["2", "2,0", "2.0", "deux"] }] },
+          "explanation": "Isochore : P/T = cte, donc P2 = P1 × T2/T1 = 2 atm."
+        },
+        {
+          "id": "th-unite-r",
+          "difficulty": "facile",
+          "tags": ["TD 2", "constantes", "unités"],
+          "mcq": {
+            "prompt": "Quelle est l’unité de la constante des gaz parfaits R ?",
+            "choices": [
+              { "id": "a", "text": "J·mol⁻¹·K⁻¹" },
+              { "id": "b", "text": "J·K⁻¹" },
+              { "id": "c", "text": "Pa·m³" },
+              { "id": "d", "text": "mol·K·J⁻¹" }
+            ],
+            "correctIds": ["a"]
+          },
+          "cloze": { "text": "La constante des gaz parfaits vaut R ≈ ___ J·mol⁻¹·K⁻¹.", "blanks": [{ "answers": ["8,314", "8.314", "8,31", "8.31"] }] },
+          "explanation": "R = PV/(nT) et 1 Pa·m³ = 1 J, donc J·mol⁻¹·K⁻¹ = Pa·m³·mol⁻¹·K⁻¹."
+        },
+        {
+          "id": "th-variation-volume",
+          "difficulty": "moyen",
+          "tags": ["TD 2", "calcul"],
+          "mcq": {
+            "prompt": "À n fixé, la pression d’un gaz parfait augmente de 1 % et sa température de 2 %. Son volume varie d’environ…",
+            "choices": [
+              { "id": "a", "text": "+1 %" },
+              { "id": "b", "text": "+3 %" },
+              { "id": "c", "text": "−1 %" },
+              { "id": "d", "text": "+2 %" }
+            ],
+            "correctIds": ["a"]
+          },
+          "explanation": "dV/V = dT/T − dP/P ≈ 2 % − 1 % = +1 %. Calcul exact : 1,02/1,01 − 1 ≈ +0,99 %."
+        },
+        {
+          "id": "th-he-vitesse",
+          "difficulty": "moyen",
+          "tags": ["TD 2", "cinétique", "calcul"],
+          "mcq": {
+            "prompt": "Vitesse quadratique moyenne de l’hélium (M = 4 g/mol) à 300 K ?",
+            "choices": [
+              { "id": "a", "text": "≈ 1,37 × 10³ m/s" },
+              { "id": "b", "text": "≈ 43 m/s" },
+              { "id": "c", "text": "≈ 1,37 × 10⁵ m/s" },
+              { "id": "d", "text": "≈ 432 m/s" }
+            ],
+            "correctIds": ["a"]
+          },
+          "explanation": "v* = √(3 × 8,314 × 300,15 / 0,004) ≈ 1368 m/s. Avec M en g/mol au lieu de kg/mol, on trouverait 43 m/s : piège classique."
+        },
+        {
+          "id": "th-he-ec",
+          "difficulty": "difficile",
+          "tags": ["TD 2", "équipartition", "calcul"],
+          "mcq": {
+            "prompt": "Énergie cinétique moyenne d’une seule molécule d’un gaz parfait à 300 K ?",
+            "choices": [
+              { "id": "a", "text": "≈ 6,2 × 10⁻²¹ J" },
+              { "id": "b", "text": "≈ 3,7 kJ" },
+              { "id": "c", "text": "≈ 374 J" },
+              { "id": "d", "text": "≈ 4,1 × 10⁻²¹ J" }
+            ],
+            "correctIds": ["a"]
+          },
+          "explanation": "⟨Ec⟩ = 3/2 k_B·T ≈ 1,5 × 1,38 × 10⁻²³ × 300 ≈ 6,22 × 10⁻²¹ J. 3,7 kJ/mol est l’énergie molaire Um."
+        },
+        {
+          "id": "th-vapeur-non-parfaite",
+          "difficulty": "moyen",
+          "tags": ["TD 2", "fluides réels"],
+          "mcq": {
+            "prompt": "À 500 °C, l’énergie interne de la vapeur d’eau passe de 56,33 kJ à 54,78 kJ quand P passe de 1 à 100 bar. Que montre ce résultat ?",
+            "choices": [
+              { "id": "a", "text": "La vapeur n’est pas un gaz parfait, car U varie à T constante" },
+              { "id": "b", "text": "La vapeur est un gaz parfait" },
+              { "id": "c", "text": "La température a changé" },
+              { "id": "d", "text": "L’énergie interne ne dépend que de P" }
+            ],
+            "correctIds": ["a"]
+          },
+          "explanation": "Pour un gaz parfait, U ne dépend que de T. De plus, PV diminue nettement quand P augmente."
+        },
+        {
+          "id": "th-air-eau",
+          "difficulty": "difficile",
+          "tags": ["TD 2", "compressibilité"],
+          "mcq": {
+            "prompt": "À 1 bar, χT(eau) = 4,4 × 10⁻¹⁰ Pa⁻¹ et χT(air) = 1/P. L’air est environ combien de fois plus compressible que l’eau ?",
+            "choices": [
+              { "id": "a", "text": "2,27 × 10⁴ fois" },
+              { "id": "b", "text": "227 fois" },
+              { "id": "c", "text": "10⁵ fois" },
+              { "id": "d", "text": "4,4 fois" }
+            ],
+            "correctIds": ["a"]
+          },
+          "explanation": "χT(air) = 1/10⁵ = 10⁻⁵ Pa⁻¹, et 10⁻⁵ / (4,4 × 10⁻¹⁰) ≈ 2,27 × 10⁴."
+        },
+        {
+          "id": "th-eau-1pc",
+          "difficulty": "difficile",
+          "tags": ["TD 2", "compressibilité", "calcul"],
+          "mcq": {
+            "prompt": "Quelle surpression faut-il pour diminuer de 1 % le volume d’eau à T constante (χT = 4,4 × 10⁻¹⁰ Pa⁻¹) ?",
+            "choices": [
+              { "id": "a", "text": "≈ 227 bar" },
+              { "id": "b", "text": "≈ 0,01 bar" },
+              { "id": "c", "text": "≈ 1 bar" },
+              { "id": "d", "text": "≈ 22 700 bar" }
+            ],
+            "correctIds": ["a"]
+          },
+          "explanation": "ΔV/V ≈ −χT·ΔP, donc ΔP ≈ 0,01 / 4,4 × 10⁻¹⁰ ≈ 2,27 × 10⁷ Pa. Pour l’air, environ 0,01 bar suffirait."
+        },
+        {
+          "id": "th-chauffe-liquide",
+          "difficulty": "difficile",
+          "tags": ["TD 2", "dilatation", "calcul"],
+          "mcq": {
+            "prompt": "Un liquide enfermé à volume constant (α = 3 × 10⁻⁴ K⁻¹, χT = 3 × 10⁻¹⁰ Pa⁻¹) est chauffé de 400 °C. Sa pression augmente d’environ…",
+            "choices": [
+              { "id": "a", "text": "4000 bar" },
+              { "id": "b", "text": "1,4 bar" },
+              { "id": "c", "text": "400 bar" },
+              { "id": "d", "text": "40 bar" }
+            ],
+            "correctIds": ["a"]
+          },
+          "explanation": "À V constant : ΔP = (α/χT)·ΔT = 10⁶ × 400 = 4 × 10⁸ Pa = 4000 bar. C’est un danger majeur pour un récipient fermé."
+        },
+        {
+          "id": "th-gp-chauffe",
+          "difficulty": "moyen",
+          "tags": ["TD 2", "gaz parfait", "calcul"],
+          "mcq": {
+            "prompt": "Un gaz parfait à 1 bar et 293 K est chauffé à volume constant jusqu’à 693 K. Sa pression finale vaut environ…",
+            "choices": [
+              { "id": "a", "text": "2,37 bar" },
+              { "id": "b", "text": "4000 bar" },
+              { "id": "c", "text": "1 bar" },
+              { "id": "d", "text": "0,42 bar" }
+            ],
+            "correctIds": ["a"]
+          },
+          "explanation": "Isochore : P1 = P0 × T1/T0 = 693/293 ≈ 2,365 bar, à comparer aux 4000 bar du liquide."
+        },
+        {
+          "id": "th-eau-1000-bar",
+          "difficulty": "difficile",
+          "tags": ["TD 2", "compressibilité", "calcul"],
+          "cloze": {
+            "text": "1 L d’eau (χT = 3 × 10⁻¹⁰ Pa⁻¹) comprimé de 1 à 1000 bar à T constante perd environ ___ mL.",
+            "blanks": [{ "answers": ["29,5", "29.5", "30", "29"] }]
+          },
+          "explanation": "ln(V1/V0) = −χT·ΔP = −0,02997, donc V1 ≈ 0,9705 L : ΔV ≈ −29,5 mL (−2,95 %). Un gaz parfait passerait de 1 L à 1 mL."
+        },
+        {
+          "id": "th-reflexes",
+          "difficulty": "facile",
+          "tags": ["méthode"],
+          "mcq": {
+            "prompt": "Lesquels sont de bons réflexes de calcul ? (plusieurs réponses)",
+            "choices": [
+              { "id": "a", "text": "Convertir les températures en kelvins avant d’utiliser PV = nRT" },
+              { "id": "b", "text": "Convertir en unités SI : litre → m³, bar → Pa, g/mol → kg/mol" },
+              { "id": "c", "text": "Distinguer 1 bar de 1 atm" },
+              { "id": "d", "text": "Utiliser les degrés Celsius dans PV = nRT" },
+              { "id": "e", "text": "Considérer qu’adiabatique signifie isotherme" }
+            ],
+            "correctIds": ["a", "b", "c"]
+          }
+        }
+      ]
+    }
+  ]
+}
